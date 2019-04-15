@@ -2,11 +2,9 @@
 // @name     Google Meet Autojoin
 // @include  https://meet.google.com/*
 // @version  0.0.1
-// @downloadURL http://www.tipsvoorbesparen.nl/1.user.js
-// @updateURL http://www.tipsvoorbesparen.nl/1.meta.js
 // ==/UserScript==
 
-    window.addEventListener('load', () => {
+window.addEventListener('load', () => {
   if (~document.body.children[0].id.indexOf("error")) {
     window.location.reload();
   } else {
@@ -31,13 +29,13 @@
       var canceled = !elem.dispatchEvent(evt);
     }
 
-// set name in input
-//     const nameInput = document.getElementsByTagName('input')[0];
+    // set name in input
+    //     const nameInput = document.getElementsByTagName('input')[0];
 
     // nameInput.value = atob(new URLSearchParams(window.location.search).get("r"));
     // nameInput.blur();
 
-// get join meeting button:
+    // get join meeting button:
     const joinButton = Array.from(document.querySelectorAll('[role="button"]')).filter(el => el.textContent.toLowerCase().includes('join') || el.textContent.toLowerCase().includes('teilnahme'))[0];
 
     // joinButton.removeAttribute('aria-disabled');
@@ -49,9 +47,9 @@
     }, 1500);
   }, 3000);
 
-  setInterval(()=>{
+  setInterval(() => {
     const closeButton = Array.from(document.getElementsByTagName('span')).filter(el => el.textContent.toLowerCase().includes('return to'))[0];
-    if(closeButton) {
+    if (closeButton) {
       window.close()
     }
   }, 5000)
