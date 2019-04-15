@@ -1,0 +1,21 @@
+{
+  "name": "Google Meet AutoJoin",
+  "version": "1.0",
+  "description": "testing!",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "matches": [
+        "https://meet.google.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "debugger",
+    "https://meet.google.com/"
+  ]
+}
