@@ -1,7 +1,4 @@
 // ==UserScript==
-
-// ==/UserScript==
-// ==UserScript==
 // @name     Google Meet Autojoin
 // @version  0.0.1
 // @description  try to take over the world!
