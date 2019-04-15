@@ -1,10 +1,17 @@
 // ==UserScript==
+
+// ==/UserScript==
+// ==UserScript==
 // @name     Google Meet Autojoin
-// @include  https://meet.google.com/*
 // @version  0.0.1
+// @description  try to take over the world!
+// @author       You
+// @match  https://meet.google.com/*
+// @grant        none
 // ==/UserScript==
 
-window.addEventListener('load', () => {
+(function() {
+
   if (~document.body.children[0].id.indexOf("error")) {
     window.location.reload();
   } else {
@@ -53,4 +60,4 @@ window.addEventListener('load', () => {
       window.close()
     }
   }, 5000)
-}, false);
+})();
